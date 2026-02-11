@@ -7,7 +7,5 @@ from sqlalchemy.orm import sessionmaker
 
 SQLALCHEMY_DATABASE_URL = "mysql://root:127.0.0.1:3307/autolavadoDB"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
-sessionLocal = sessionmaker(autocommit = False, autoflush = False, bind = engine)
+SESSION_LOCAL = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
-
-
