@@ -1,16 +1,16 @@
-import models.model_vehiculos
+import models.model_vehiculo
 import schemas.schema_vehiculo
 from sqlalchemy.orm import Session
 import models, schemas
 
 def get_vehiculo(db: Session,skip: int = 0, limit: int = 100):
-    return db.query(models.model_vehiculos.Vehiculo).offset(skip).limit(limit).all()
+    return db.query(models.model_vehiculo.Vehiculo).offset(skip).limit(limit).all()
 
 def get_vehiculo_by_nombre(db: Session, placas: str):
-    return db.query(models.model_vehiculos.Vehiculo).filter(models.model_vehiculos.Vehiculo.placas == placas).first()
+    return db.query(models.model_vehiculo.Vehiculo).filter(models.model_vehiculos.Vehiculo.placas == placas).first()
 
 def create_vehiculo(db:Session, vehiculo: schemas.schema_vehiculo.VehiculoCreate):
-    db_vehiculo = models.model_vehiculos.Vehiculo(
+    db_vehiculo = models.model_vehiculo.Vehiculo(
         usuario_Id = vehiculo.usuario_Id,
         placas = vehiculo.placas,
         marca = vehiculo.marca,
@@ -30,7 +30,7 @@ def create_vehiculo(db:Session, vehiculo: schemas.schema_vehiculo.VehiculoCreate
 
 def update_vehiculo(db:Session, id: int, vehiculo: schemas.schema_vehiculo.VehiculoUpdate):
     
-    db_vehiculo = db.query(models.model_vehiculos.Vehiculo).filter(models.model_vehiculos.Vehiculo.Id == id).first()
+    db_vehiculo = db.query(models.model_vehiculo.Vehiculo).filter(models.model_vehiculos.Vehiculo.Id == id).first()
     if db_vehiculo:
         for var, value in vars(vehiculo).items():
             setattr(db_vehiculo, var, value) if value else None

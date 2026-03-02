@@ -17,4 +17,4 @@ class Servicio(Base):
     fecha_registro = Column(DateTime)
     fecha_actualizacion = Column(DateTime)
 
-    usuarios_vehiculos_servicios = relationship("UsuarioVehiculoServicio", back_populates="servicios")
+    usuarios_vehiculos_servicios_S = relationship("UsuarioVehiculoServicio", back_populates="servicios")

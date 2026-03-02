@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-import config.db, crud.crud_vehiculo,  schemas.schema_vehiculo, models.model_vehiculos
+import config.db, crud.crud_vehiculo,  schemas.schema_vehiculo, models.model_vehiculo
 from typing import List
 
 
 vehiculo = APIRouter()
 
-models.model_vehiculos.Base.metadata.create_all(bind=config.db.engine)
+models.model_vehiculo.Base.metadata.create_all(bind=config.db.engine)
 
 def get_db():
     db = config.db.SessionLocal()

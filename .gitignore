@@ -1,0 +1,11 @@
+#Ignorar archivo de variables de entorno
+.env
+
+#Ignorar carpeta completa
+entornoAPI/
+
+#Ignorar carpeta __pycache__
+__pycache__
+
+# Ignorar archivos compilados de Python
+*.pyc

@@ -28,8 +28,8 @@ class UsuarioVehiculoServicio(Base):
     fecha_registro = Column(DateTime)
     fecha_actualizacion = Column(DateTime)
 
-    vehiculos = relationship("Vehiculo", back_populates="usuarios_vehiculos_servicios")
-    servicios = relationship("Servicio", back_populates="usuarios_vehiculos_servicios")
+    vehiculos = relationship("Vehiculo", back_populates="usuarios_vehiculos_servicios_V")
+    servicios = relationship("Servicio", back_populates="usuarios_vehiculos_servicios_S")
     cajero = relationship("Usuario", foreign_keys=[cajero_Id], back_populates="servicios_cajero")
     operativo = relationship("Usuario",foreign_keys=[operativo_Id], back_populates="servicios_operativo")
     
