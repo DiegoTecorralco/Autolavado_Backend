@@ -55,5 +55,5 @@ def login(db: Session = Depends(get_db), form_data: OAuth2PasswordRequestForm = 
         )
     
     # Generamos el token usando una utilidad de seguridad
-    access_token = create_access_token(data={"sub": usuario.correo_electronico})
+    access_token = create_access_token(data={"sub": usuario.correo_electronico})    
     return {"access_token": access_token, "token_type": "bearer"}
