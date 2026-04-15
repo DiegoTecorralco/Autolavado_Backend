@@ -1,0 +1,4 @@
+{"timestamp": "2026-04-15T14:34:09.997827", "level": "INFO", "logger": "database", "module": "crud_usuario", "function": "create_usuario", "line": 24, "message": "Intentando crear usuario - Nombre: Prueba, Email: test@autolavado.com"}
+{"timestamp": "2026-04-15T14:34:10.147422", "level": "INFO", "logger": "database", "module": "crud_usuario", "function": "create_usuario", "line": 48, "message": "Usuario creado exitosamente - ID: 9, Nombre: Prueba"}
+{"timestamp": "2026-04-15T14:39:28.005323", "level": "INFO", "logger": "database", "module": "crud_usuario", "function": "create_usuario", "line": 24, "message": "Intentando crear usuario - Nombre: LoginTest, Email: logintest@test.com"}
+{"timestamp": "2026-04-15T14:39:28.128113", "level": "INFO", "logger": "database", "module": "crud_usuario", "function": "create_usuario", "line": 48, "message": "Usuario creado exitosamente - ID: 10, Nombre: LoginTest"}
